@@ -14,7 +14,7 @@ const Emails = () => {
 
     const { type } = useParams();
 
-    const getEmailsService = useApi(API_URLS.getEmailFromType);
+    let getEmailsService = useApi(API_URLS.getEmailFromType);
 
     useEffect(() => {
         getEmailsService.call({}, type);
